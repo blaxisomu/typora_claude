@@ -831,7 +831,7 @@ hr {
 /* 主容器 */
 .md-fences {
   margin: 0 !important;
-  padding: 2.8rem 0.875rem 0.875rem 0.875rem;
+  padding: 0.875rem;
   background-color: var(--pre-bg-color);
   border-style: solid;
   border-width: 0.5px;
@@ -891,118 +891,8 @@ hr {
   padding: 0 !important;
 }
 
-/* 语法标签栏输入框 */
-.ty-input.ty-input-after.ty-cm-lang-input {
-  border: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  text-align: left !important;
-  color: var(--pre-inputfont-color) !important;
-  font-weight: var(--pre-inputfont-weight) !important;
-  font-size: 0.75rem !important;
-  font-family: var(--font-sans);
-}
-
-/* 语法标签栏 - 定位至代码块内左上角 */
-.md-fences .code-tooltip.md-tooltip-remove {
-  font-size: 0.75rem !important;
-  font-family: var(--font-sans);
-  border: none !important;
-  box-shadow: none !important;
-  margin: 0 !important;
-  padding: 14px 0 0 15px !important;
-  line-height: 17px;
-  height: auto;
-  top: 0px !important;
-  bottom: auto !important;
-  left: 0px !important;
-}
-
-/* ----- 未点击代码块时的语言标签 ----- */
-
-/* 静态常驻的语言标签 */
-.md-fences[lang]:not([lang=""])::before {
-  content: attr(lang);
-  position: absolute;
-  display: block;
-  top: 0px !important;
-  left: 0px !important;
-  padding: 14px 0 0 15px !important;
-  line-height: 17px !important;
-  color: var(--pre-inputfont-color) !important;
-  font-weight: var(--pre-inputfont-weight) !important;
-  font-size: 0.75rem !important;
-  font-family: var(--font-sans) !important;
-  z-index: 11;
-  pointer-events: none;
-  opacity: 1;
-  visibility: visible;
-}
-
-/* 代码内容聚焦时仍保持静态标签，避免和原生输入框切换时闪烁 */
-.md-fences.md-focus[lang]::before {
-  opacity: 1 !important;
-  visibility: visible !important;
-}
-
-/* 仅在真正编辑语言名时，隐藏静态标签 */
-.md-fences.md-focus:has(.code-tooltip:focus-within)[lang]::before {
-  opacity: 0 !important;
-  visibility: hidden !important;
-}
-
-/* 原生输入框（所有状态全覆盖） */
-.md-fences .code-tooltip {
-  position: absolute !important;
-  top: 0px !important;
-  left: 0px !important;
-  bottom: auto !important;
-  right: auto !important;
-  padding: 14px 0 0 15px !important;
-  margin: 0 !important;
-  height: auto !important;
-  border: none !important;
-  box-shadow: none !important;
-  background: transparent !important;
-  transition: none !important;
-  animation: none !important;
-  z-index: 10;
-  opacity: 0 !important;
-  visibility: hidden !important;
-  pointer-events: none !important;
-}
-
-/* 聚焦代码块时保留可点击区域，但不显示第二层语言文字 */
-.md-fences.md-focus .code-tooltip {
-  visibility: visible !important;
-  pointer-events: auto !important;
-}
-
-/* 只有输入框自身获得焦点时才显示原生语言输入层 */
-.md-fences.md-focus .code-tooltip:focus-within {
-  opacity: 1 !important;
-  visibility: visible !important;
-}
-
-/* 失去焦点时，瞬间隐藏原生输入框 */
-.md-fences:not(.md-focus) .code-tooltip {
-  opacity: 0 !important;
-  visibility: hidden !important;
-  display: none !important;
-}
-
-/* 统一原生输入框内文字的样式 */
-.md-fences .code-tooltip .ty-input {
-  color: var(--pre-inputfont-color) !important;
-  font-weight: var(--pre-inputfont-weight) !important;
-  font-size: 0.75rem !important;
-  font-family: var(--font-sans) !important;
-  line-height: 17px !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  border: none !important;
-  background: transparent !important;
-  text-align: left !important;
+.md-lang .md-fences .code-tooltip {
+  color: var(--pre-inputfont-color);
 }
 
 /* ----- 语法高亮映射配置（不用变量） ----- */

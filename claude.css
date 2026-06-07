@@ -735,8 +735,8 @@ span[md-inline="underline"] u {
     line-height: 1.65rem;
 }
 
-.write th,
-.write td {
+#write th,
+#write td {
     font-size: 0.875rem;
     line-height: 1.7;
     border-left: none;
@@ -748,12 +748,12 @@ span[md-inline="underline"] u {
     /* 魔法属性：让内层 height: 100% 生效 */
 }
 
-.write tr:last-child td {
+#write tr:last-child td {
     border-bottom-style: solid;
     border-bottom-width: 0.5px;
 }
 
-.write table thead {
+#write table thead {
     border-bottom-style: solid;
     border-bottom-width: 0.5px;
 }

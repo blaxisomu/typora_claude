@@ -601,7 +601,7 @@ input:focus,
 
 #write h1 {
     font-size: 1.5rem;
-    line-height: 1.7rem;
+    line-height: 1.3;
     font-weight: var(--font-strong);
     margin: 0.75rem 0 -0.25rem 0;
     padding: 0 2rem 0 0.5rem;
@@ -609,7 +609,7 @@ input:focus,
 
 #write h2 {
     font-size: 1.25rem;
-    line-height: 1.65rem;
+    line-height: 1.35;
     font-weight: var(--font-strong);
     margin: 0.75rem 0 -0.25rem 0;
     padding: 0 2rem 0 0.5rem;
@@ -617,7 +617,7 @@ input:focus,
 
 #write h3 {
     font-size: 1.15rem;
-    line-height: 1.5rem;
+    line-height: 1.4;
     font-weight: var(--font-strong);
     margin: 0.5rem 0 -0.25rem 0;
     padding: 0 2rem 0 0.5rem;
@@ -625,7 +625,7 @@ input:focus,
 
 #write h4 {
     font-size: 1rem;
-    line-height: 1.5rem;
+    line-height: 1.5;
     font-weight: var(--font-strong);
     margin: 0.5rem 0 -0.25rem 0;
     padding: 0 2rem 0 0.5rem;
@@ -633,8 +633,8 @@ input:focus,
 
 #write h5,
 #write h6 {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
     font-weight: 600;
     margin: 0.5rem 0 -0.25rem 0;
     padding: 0 2rem 0 0.5rem;
@@ -2352,7 +2352,7 @@ mjx-container {
     line-height: 0;
     vertical-align: middle;
     position: relative;
-    top: -2px;
+    top: -1px;
     opacity: 0.85;
 }
 

@@ -1327,6 +1327,7 @@ p+blockquote+blockquote+blockquote {
     font-size: 0.78rem;
     font-weight: 700;
     line-height: 1.2;
+    text-transform: capitalize;
 }
 
 #write .md-alert-text svg {
@@ -1335,10 +1336,11 @@ p+blockquote+blockquote+blockquote {
     fill: currentColor;
     margin-right: 0.42rem;
     opacity: 0.95;
+    transform: translateY(1px);
 }
 
 #write .md-alert-text-container::after {
-    text-transform: none;
+    text-transform: capitalize;
     letter-spacing: 0;
 }
 

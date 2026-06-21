@@ -735,13 +735,13 @@ span[md-inline="underline"] u {
     border-left: none;
     border-right: none;
     border-top: none;
-    border-bottom-width: 0.5px;
+    border-bottom: none;
     padding: 0.5rem 1rem 0.5rem 1px !important;
     /* 让内层 height: 100% 生效 */
     height: 1px;
 }
 
-.write tr:last-child td {
+/* .write tr:last-child td {
     border-bottom-style: solid;
     border-bottom-width: 0.5px;
 }
@@ -749,20 +749,32 @@ span[md-inline="underline"] u {
 .write table thead {
     border-bottom-style: solid;
     border-bottom-width: 0.5px;
-}
+} */
 
 .md-plain {
     padding: 0;
 }
 
 #write th {
-    border-bottom-color: var(--table-th-border);
+    /* border-bottom-color: var(--table-th-border); */
     font-weight: var(--font-strong);
 }
 
 #write td {
-    border-bottom-color: var(--table-td-border);
+    /* border-bottom-color: var(--table-td-border); */
     font-weight: var(--font-weight);
+}
+
+#write thead tr {
+    border-bottom-style: solid;
+    border-bottom-width: 0.5px;
+    border-bottom-color: var(--table-th-border) !important;
+}
+
+#write tbody tr {
+    border-bottom-style: solid;
+    border-bottom-width: 0.5px;
+    border-bottom-color: var(--table-td-border) !important;
 }
 
 /*------ 表格工具栏 ------*/

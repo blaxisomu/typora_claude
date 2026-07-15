@@ -647,7 +647,12 @@ input:focus,
 
 /* dark；粗体改为颜色变化 */
 #write strong {
-    font-weight: var(--font-strong);
+    font-weight: var(--font-weight) !important;
+    color: var(--dark-strong-color);
+}
+
+th {
+    font-weight: var(--font-strong) !important;
     color: var(--dark-strong-color);
 }
 
@@ -805,10 +810,6 @@ span[md-inline="underline"] u {
     padding: 0;
 }
 
-#write th {
-    /* border-bottom-color: var(--table-th-border); */
-    font-weight: var(--font-strong);
-}
 
 #write td {
     /* border-bottom-color: var(--table-td-border); */

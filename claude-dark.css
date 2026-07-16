@@ -356,7 +356,7 @@ body {
         0 14px 36px rgba(0, 0, 0, 0.36),
         inset 0 1px 0 rgba(255, 255, 255, 0.08);
 
-    border-radius: 12px;
+    border-radius: 8px;
 }
 
 .menu-item-container a.menu-style-btn {
@@ -476,7 +476,7 @@ li.folder-menu-item.file-action-item.selected-folder-menu-item:hover>a {
 }
 
 .typora-node.pin-outline:not(.megamenu-opened):not(.typora-sourceview-on) footer.ty-footer {
-    border-radius: 66px;
+    border-radius: 999px;
 }
 
 .typora-node.pin-outline:not(.megamenu-opened):not(.typora-sourceview-on) footer.ty-footer {
@@ -499,7 +499,7 @@ li.folder-menu-item.file-action-item.selected-folder-menu-item:hover>a {
 /* ---------- 5. 查找与替换 ---------- */
 
 #md-searchpanel input {
-    border-radius: 3px;
+    border-radius: 4px;
 }
 
 .form-control {
@@ -739,7 +739,7 @@ span[md-inline="underline"] u {
     margin-left: -1.3em !important;
     margin-top: calc(1em - 12px) !important;
     border: 1px solid #626262 !important;
-    border-radius: 2px !important;
+    border-radius: 4px !important;
     background-color: #3b3b3b !important;
     cursor: pointer;
 }
@@ -1204,7 +1204,7 @@ tt {
     background-color: var(--code-bg-color);
     color: var(--code-font-color);
     font-size: 0.9rem;
-    border-radius: 0.4rem;
+    border-radius: 4px;
     border-color: var(--code-border);
     border-width: 0.5px;
     padding: 1px 0.25rem;
@@ -1231,7 +1231,7 @@ kbd {
         var(--button-bg-color);
     border: 1px solid var(--border-color-15);
     border-bottom-color: var(--border-color-30);
-    border-radius: 0.42rem;
+    border-radius: 4px;
     box-shadow:
         inset 0 -1px 0 rgb(0 0 0 / 34%),
         0 1px 2px rgb(0 0 0 / 26%);
@@ -1606,7 +1606,7 @@ mjx-container {
         radial-gradient(circle at 86% 0%, rgba(217, 151, 87, 0.08), transparent 34%),
         linear-gradient(135deg, rgba(250, 249, 245, 0.075), rgba(250, 249, 245, 0.035));
     border: 1px solid transparent;
-    border-radius: 10px;
+    border-radius: 8px;
     box-shadow:
         0 6px 18px rgba(0, 0, 0, 0.14),
         inset 0 1px 0 rgba(255, 232, 178, 0.12),
@@ -1810,7 +1810,7 @@ mjx-container {
             var(--sidebar-gradient-from),
             var(--sidebar-gradient-to));
     border-color: transparent;
-    border-radius: 15px;
+    border-radius: 8px;
     box-shadow: var(--box-shadow-userinput) !important;
     transition:
         left 360ms cubic-bezier(0.22, 1, 0.36, 1),
@@ -1919,16 +1919,16 @@ mjx-container {
         inset 0 1px 0 rgba(255, 255, 255, 0.22),
         inset 0 -1px 0 rgba(0, 0, 0, 0.10) !important;
 
-    border-radius: 16px !important;
+    border-radius: 8px !important;
 }
 
 #sidebar-new-file-btn {
-    border-bottom-left-radius: 15px !important;
+    border-bottom-left-radius: 8px !important;
     background-clip: padding-box;
 }
 
 #switch-file-list-btn {
-    border-bottom-right-radius: 15px !important;
+    border-bottom-right-radius: 8px !important;
     background-clip: padding-box;
 }
 
@@ -2699,7 +2699,7 @@ mjx-container {
     z-index: 50;
     margin: 0 0 3px 7px;
     width: calc(100% - 4px);
-    border-radius: 5px;
+    border-radius: 4px;
     border: none;
     line-height: 1;
     padding: 0 0 0 4px;
@@ -3269,7 +3269,7 @@ mjx-container {
     margin-bottom: 22px;
     padding: 20px 22px;
     border: 1px solid var(--claude-mega-border);
-    border-radius: 14px;
+    border-radius: 8px;
     background: var(--claude-mega-panel);
     box-shadow: var(--claude-mega-shadow);
 }
@@ -3307,7 +3307,7 @@ mjx-container {
 .unibody-window .megamenu-menu-panel .long-btn,
 .unibody-window .megamenu-menu-panel .btn {
     border: 1px solid var(--claude-mega-border) !important;
-    border-radius: 10px !important;
+    border-radius: 8px !important;
     background: var(--claude-mega-panel-hover) !important;
     color: var(--font-color) !important;
     box-shadow: none !important;
@@ -3334,7 +3334,7 @@ mjx-container {
 .unibody-window #recent-file-panel {
     padding: 14px;
     border: 1px solid var(--claude-mega-border);
-    border-radius: 12px;
+    border-radius: 8px;
     background: rgba(222, 220, 209, 0.045);
 }
 
@@ -3360,14 +3360,14 @@ mjx-container {
 .unibody-window .megamenu-menu-panel #recent-file-panel .dropdown-menu {
     margin-top: 6px;
     border: 1px solid var(--claude-mega-border) !important;
-    border-radius: 10px !important;
+    border-radius: 8px !important;
     background: var(--bg-color) !important;
     box-shadow: var(--box-shadow-userinput) !important;
 }
 
 .unibody-window #megamenu-clear-recet-documents {
     padding: 6px 10px;
-    border-radius: 7px;
+    border-radius: 4px;
     background: var(--hover-color);
     color: var(--font-color) !important;
     font-size: 13px;
@@ -3421,7 +3421,7 @@ mjx-container {
     overflow: hidden;
     padding: 5px;
     border: 2px solid var(--claude-mega-border);
-    border-radius: 12px;
+    border-radius: 8px;
     background: var(--claude-mega-panel);
     color: var(--LOGO-color);
     transition: border-color 0.16s ease, transform 0.16s ease, box-shadow 0.16s ease;
@@ -3459,7 +3459,7 @@ mjx-container {
 .unibody-window #about-content .about-content-main {
     padding: 20px;
     border: 1px solid var(--claude-mega-border);
-    border-radius: 14px;
+    border-radius: 8px;
     background: rgba(222, 220, 209, 0.045);
 }
 
@@ -3649,7 +3649,7 @@ mjx-container {
 }
 
 .unibody-window .uni-preference-panel webview {
-    border-radius: 20px !important;
+    border-radius: 8px !important;
 }
 
 /* --- Integrated menu interaction pass: smooth slider layer and visible recent-file hover --- */
@@ -3836,7 +3836,7 @@ mjx-container {
     color: var(--sidebar-font-color) !important;
     background: rgba(250, 249, 245, 0.06) !important;
     border: 0.5px solid rgba(255, 255, 255, 0.08) !important;
-    border-radius: 6px !important;
+    border-radius: 4px !important;
     box-shadow:
         0 4px 12px -4px rgba(0, 0, 0, 0.2),
         inset 0 1px 0 rgba(255, 255, 255, 0.06) !important;
@@ -3898,7 +3898,7 @@ mjx-container {
         rgba(31, 31, 29, 0.50) !important;
     color: var(--font-color) !important;
     border: 0.5px solid rgba(255, 255, 255, 0.10) !important;
-    border-radius: 12px !important;
+    border-radius: 8px !important;
     box-shadow:
         0 16px 42px rgba(0, 0, 0, 0.34),
         inset 0 1px 0 rgba(255, 255, 255, 0.10),
@@ -4254,7 +4254,7 @@ body.pin-outline #plugin-window-tab .tab-bar {
 }
 
 .pane-group .nav-group-item {
-    border-radius: 7px !important;
+    border-radius: 4px !important;
 }
 
 .export-detail {
@@ -4274,7 +4274,7 @@ body.pin-outline #plugin-window-tab .tab-bar {
 }
 
 .export-detail textarea {
-    border-radius: 5px !important;
+    border-radius: 4px !important;
     background-color: var(--border-color-30) !important;
 }
 
@@ -4288,11 +4288,11 @@ body.pin-outline #plugin-window-tab .tab-bar {
 
 .pane-sm.sidebar .search-input {
     border-color: #D97757 !important;
-    border-radius: 20px !important;
+    border-radius: 4px !important;
 }
 
 .pane-group button.btn-default {
-    border-radius: 5px !important;
+    border-radius: 4px !important;
     border-color: var(--border-color-15) !important;
 }
 
@@ -4303,7 +4303,7 @@ body.pin-outline #plugin-window-tab .tab-bar {
 .pane-group .input-group-content {
     padding: 24px 30px 24px 16px !important;
     border: 1px solid var(--border-color-15) !important;
-    border-radius: 13px !important;
+    border-radius: 8px !important;
 }
 
 .pane-group .input-group-header-title {

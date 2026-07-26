@@ -221,9 +221,8 @@ body {
     width: 100%;
     max-width: 752px;
     padding: 2.25rem 1rem 4.375rem 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
+    display: block;
+    gap: normal;
     caret-color: var(--LOGO-color);
 }
 
@@ -618,17 +617,70 @@ span[md-inline="underline"] u {
 
 /* ---------- 2. 有序列表、无序列表 ---------- */
 
+/* Typora 编辑态会把 .md-list-item 临时切回 list-item；有序列表改用 grid 自绘编号，避免原生 marker 和长编号重叠。 */
+#write ul,
+#write ol,
 .write ul,
 .write ol {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
+    position: relative;
+    display: block;
     line-height: 1.65rem;
+    list-style-position: outside;
 }
 
+#write ol,
+.write ol {
+    counter-reset: typora-ordered-list;
+    list-style: none !important;
+    list-style-type: none !important;
+}
+
+#write ol>li,
+.write ol>li {
+    counter-increment: typora-ordered-list;
+    display: grid !important;
+    grid-template-columns: max-content minmax(0, 1fr);
+    column-gap: 0.75rem;
+    align-items: start;
+    list-style: none !important;
+    list-style-type: none !important;
+    position: relative;
+    padding-left: 0;
+}
+
+#write ol>li::marker,
+.write ol>li::marker {
+    content: "" !important;
+    font-size: 0 !important;
+}
+
+#write ol>li::before,
+.write ol>li::before {
+    content: counters(typora-ordered-list, ".") ".";
+    position: static;
+    grid-column: 1;
+    text-align: right;
+    white-space: nowrap;
+}
+
+#write ol>li>*,
+.write ol>li>* {
+    grid-column: 2;
+    min-width: 0;
+}
+
+#write li>ul,
+#write li>ol,
+.write li>ul,
+.write li>ol {
+    grid-column: 1 / -1;
+}
+
+#write li,
 .write li {
+    position: relative;
     padding: 0 0 0 0.5rem;
-    margin: 0;
+    margin: 0 0 0.25rem 0;
 }
 
 #write li>p {
@@ -663,9 +715,42 @@ span[md-inline="underline"] u {
     padding-right: 0 !important;
 }
 
-/* 将所有嵌套层级的普通无序列表修改为实心圆点，同时排除任务列表 */
-#write ul:not(.task-list) {
-    list-style-type: disc;
+/* 无序列表也自绘圆点，避免混合嵌套在 ol grid 中触发原生 marker 错位。 */
+#write ul.ul-list,
+.write ul.ul-list {
+    list-style: none !important;
+    list-style-type: none !important;
+}
+
+#write ul.ul-list>li.md-list-item:not(.md-task-list-item),
+.write ul.ul-list>li.md-list-item:not(.md-task-list-item) {
+    display: grid !important;
+    grid-template-columns: max-content minmax(0, 1fr);
+    column-gap: 0.75rem;
+    align-items: start;
+    list-style: none !important;
+    list-style-type: none !important;
+    padding-left: 0;
+}
+
+#write ul.ul-list>li.md-list-item:not(.md-task-list-item)::marker,
+.write ul.ul-list>li.md-list-item:not(.md-task-list-item)::marker {
+    content: "" !important;
+    font-size: 0 !important;
+}
+
+#write ul.ul-list>li.md-list-item:not(.md-task-list-item)::before,
+.write ul.ul-list>li.md-list-item:not(.md-task-list-item)::before {
+    content: "•";
+    grid-column: 1;
+    text-align: center;
+    white-space: nowrap;
+}
+
+#write ul.ul-list>li.md-list-item:not(.md-task-list-item)>*,
+.write ul.ul-list>li.md-list-item:not(.md-task-list-item)>* {
+    grid-column: 2;
+    min-width: 0;
 }
 
 
